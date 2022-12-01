@@ -40,7 +40,8 @@
    % Mise en page par défaut %
    %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\setlength{\textwidth}{160mm}    %% Largeur de la zone texte
+\setlength{\textwidth}{170mm}    %% Largeur de la zone texte
+\setlength{\textheight}{270mm}    %% Hauteur de la zone texte
 \setlength{\oddsidemargin}{0mm}	 %% Texte centré sur la page
 
 \pagestyle{empty} % pour ne pas indiquer de numéro de page...
@@ -161,10 +162,9 @@
 % \end{chapeau}
 
 \newenvironment{adresse}{%
-\begin{minipage}{7cm}
-\begin{center}
+\begin{minipage}{6cm}
 }
-{\end{center}\end{minipage}\hfill}
+{\end{minipage}}
 
 \newenvironment{etatcivil}{%
 \begin{minipage}{5cm}
@@ -172,9 +172,16 @@
 }
 {\end{center}\end{minipage}}
 
+\newenvironment{name}{%
+\begin{center}
+    \begin{huge}
+}
+{\end{huge}\end{center}
+\vspace{1cm}}
+
 \newenvironment{chapeau}{%
 \def\ligne{\rule[2pt]{24pt}{1pt}}%
-\noindent\begin{minipage}{\linewidth}\hspace{-2cm}%
+\noindent\begin{minipage}{\linewidth}\hspace{-1cm}%
 }
 {\end{minipage}\vspace{\stretch{0.25}}}
 
